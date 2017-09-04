@@ -34,7 +34,7 @@
 
         var myChart = new dimple.chart(svg, data);
         var y = myChart.addCategoryAxis("y", "height");
-        var x = myChart.addCategoryAxis("x", "weight");
+        var x = myChart.addCategoryAxis("x", ["handedness", "weight"]);
         var z = myChart.addMeasureAxis("z", "avg");
         myChart.addSeries("handedness", dimple.plot.bubble);
         myChart.addLegend(1300, 250, 20, 360, "right");

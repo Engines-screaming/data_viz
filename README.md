@@ -10,7 +10,14 @@ The initial design was to include a task bar with my name, a graph title, and a 
 
 ### Feedback
 
-Pending feedback
+##### Reviewer 1 -<br>
+-The scale for weight should show up under each of the handed categories
+
+##### Reviewer 2 -<br>
+-Would be nicer if they were all plotted on the same scale instead of being separated. This way you can directly compare points in one handedness to another.
+
+##### Reviewer 3 -<br>
+-Nicely done. I think that a bar chart would be better though.
 
 ### Resources
 
