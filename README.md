@@ -1,4 +1,4 @@
-# Data Vizualization - Project 6
+# Data Visualization - Project 6
 
 ### Summary 
 
