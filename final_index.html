@@ -19,34 +19,35 @@
     <script src="http://dimplejs.org/dist/dimple.v2.0.0.min.js"></script> 
 
     <script type="text/javascript">
-      function draw(data) {
-        "use strict"
-        var margin = 200,
-            width = 1400 - margin,
-            height = 600 - margin;
+    "use strict";
 
-        var svg = d3.select("body")
-          .append("svg")
-            .attr("width", width + margin)
-            .attr("height", height + margin)
+    // Function to create graph
+      function draw(data) {
+
+        // create graph in the svg element 
+        var svg = d3.select("svg")
           .append('g')
             .attr('class', 'chart');
 
+        // create new chart and axis
         var myChart = new dimple.chart(svg, data);
-        var y = myChart.addCategoryAxis("y", "height");
-        var x = myChart.addCategoryAxis("x", "weight");
-        var z = myChart.addMeasureAxis("z", "avg");
-        myChart.addSeries("handedness", dimple.plot.bubble);
-        myChart.addLegend(1300, 250, 20, 360, "right");
+        var x = myChart.addCategoryAxis("x", "handedness");
+        var y = myChart.addMeasureAxis("y", "HR");
+
+        // rename chart for better formatting
+        x.title = "Handedness";
+        y.title = "Home Runs";
+
+        // facet on handedness even though its already faceted to get colors
+        myChart.addSeries("handedness", dimple.plot.bar);
         myChart.draw();
       };
 
     </script>
-
   </head>
 
-  <body>
 
+  <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
       <a class="navbar-brand" href="#">Karl Ravago - Data Visualization Project 6</a>
     </nav>
@@ -54,14 +55,27 @@
     <div class="container">
 
       <div class="starter-template">
-        <h1>Batting Averages by Height, Weight, and Handedness</h1>
+        <h1>Median Home Runs per Batting Stance</h1>
       </div>
 
     </div>
 
     <script type="text/javascript">
-      d3.csv("data/baseball_data.csv", draw);
+      d3.csv("data/parsed_baseball_data.csv", draw);
     </script>
+
+    <div class="container">
+      <svg width=1100 height=400></svg>
+    </div>
+
+    <div class="starter-template">
+      <h4>Legend: Handedness</h6>
+      <p>
+      R = Right handed<br>
+      L = Left Handed<br>
+      B = Both Handed
+      </p>
+    </div>
 
   </body>
 </html>
