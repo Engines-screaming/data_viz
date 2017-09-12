@@ -24,7 +24,7 @@ To find the median home runs for each handedness, I used the pandas library in p
 -Nicely done. I think that a bar chart would be better though.
 
 ##### Reviewer 4<br>
-I am marking this as not meeting specification since in this project we require that the visualization centers on a specific, clear finding in the data. 
+-I am marking this as not meeting specification since in this project we require that the visualization centers on a specific, clear finding in the data. 
 
 ### Resources
 
@@ -34,5 +34,5 @@ https://github.com/PMSI-AlignAlytics/dimple/wiki/dimple.chart#series
 Data set -<br>
 https://docs.google.com/document/d/1w7KhqotVi5eoKE3I_AZHbsxdr-NmcWsLTIiZrpxWx4w/pub?embedded=true
 
-Explainatory vs Exploratory Analysis -<br>
+Explanatory vs Exploratory Analysis -<br>
 http://www.storytellingwithdata.com/blog/2014/04/exploratory-vs-explanatory-analysis
